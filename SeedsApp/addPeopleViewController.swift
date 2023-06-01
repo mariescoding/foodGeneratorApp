@@ -2,12 +2,16 @@
 //  addPeopleViewController.swift
 //  SeedsApp
 //
-//  Created by Marie Muramatsu on 30/5/23.
+//  Created by Marie Muramatsu on 1/6/23.
 //
 
 import UIKit
 
 class addPeopleViewController: UIViewController {
+    
+    @IBOutlet var nameInput: UITextField!
+    
+    var peopleArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +19,29 @@ class addPeopleViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func saveWord(){
+          
+    
+            
+            if nameInput.text == "" {
+                let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                
+            }else{
+                peopleArray.append(nameInput.text!)
+                //save to DB
+                
+                
+                
+                let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+            }
+            
+            
+            nameInput.text = ""
+        }
 
     /*
     // MARK: - Navigation

@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		985D00BB2A25E11000083FEB /* addPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00BA2A25E11000083FEB /* addPeopleViewController.swift */; };
+		982CB5D82A28CB2B0044AD69 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */; };
+		982CB5DD2A28CBBE0044AD69 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */; };
+		982CB5DE2A28CBBE0044AD69 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */; };
+		982CB5E02A28CC5D0044AD69 /* addPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */; };
+		98551C982A25E86800C79B45 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C972A25E86800C79B45 /* Realm */; };
+		98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C992A25E86800C79B45 /* RealmSwift */; };
+		98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98551C9B2A260F2E00C79B45 /* Memo.swift */; };
 		985D00BD2A25E12B00083FEB /* addMenusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00BC2A25E12B00083FEB /* addMenusViewController.swift */; };
 		985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00BE2A25E15200083FEB /* generateViewController.swift */; };
 		985D00C12A25E16800083FEB /* browseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00C02A25E16800083FEB /* browseViewController.swift */; };
+		985D00C32A25E4B300083FEB /* introViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00C22A25E4B300083FEB /* introViewController.swift */; };
 		98D2C6AA2A210A4B003BFEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */; };
 		98D2C6AC2A210A4B003BFEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */; };
 		98D2C6AE2A210A4B003BFEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6AD2A210A4B003BFEFC /* ViewController.swift */; };
@@ -20,10 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		985D00BA2A25E11000083FEB /* addPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPeopleViewController.swift; sourceTree = "<group>"; };
+		982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
+		982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
+		982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPeopleViewController.swift; sourceTree = "<group>"; };
+		98551C9B2A260F2E00C79B45 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Memo.swift; path = Assets.xcassets/Memo.swift; sourceTree = "<group>"; };
 		985D00BC2A25E12B00083FEB /* addMenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMenusViewController.swift; sourceTree = "<group>"; };
 		985D00BE2A25E15200083FEB /* generateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateViewController.swift; sourceTree = "<group>"; };
 		985D00C02A25E16800083FEB /* browseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browseViewController.swift; sourceTree = "<group>"; };
+		985D00C22A25E4B300083FEB /* introViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introViewController.swift; sourceTree = "<group>"; };
 		98D2C6A62A210A4B003BFEFC /* SeedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */,
+				98551C982A25E86800C79B45 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +81,11 @@
 				98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */,
 				98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */,
 				98D2C6AD2A210A4B003BFEFC /* ViewController.swift */,
-				985D00BA2A25E11000083FEB /* addPeopleViewController.swift */,
+				985D00C22A25E4B300083FEB /* introViewController.swift */,
+				982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */,
+				982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */,
+				982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */,
+				982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */,
 				985D00BC2A25E12B00083FEB /* addMenusViewController.swift */,
 				985D00C02A25E16800083FEB /* browseViewController.swift */,
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
@@ -75,6 +93,7 @@
 				98D2C6B22A210A51003BFEFC /* Assets.xcassets */,
 				98D2C6B42A210A51003BFEFC /* LaunchScreen.storyboard */,
 				98D2C6B72A210A51003BFEFC /* Info.plist */,
+				98551C9B2A260F2E00C79B45 /* Memo.swift */,
 			);
 			path = SeedsApp;
 			sourceTree = "<group>";
@@ -95,6 +114,10 @@
 			dependencies = (
 			);
 			name = SeedsApp;
+			packageProductDependencies = (
+				98551C972A25E86800C79B45 /* Realm */,
+				98551C992A25E86800C79B45 /* RealmSwift */,
+			);
 			productName = SeedsApp;
 			productReference = 98D2C6A62A210A4B003BFEFC /* SeedsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 98D2C69D2A210A4B003BFEFC;
+			packageReferences = (
+				98551C962A25E86800C79B45 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 98D2C6A72A210A4B003BFEFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982CB5DE2A28CBBE0044AD69 /* PeopleTableViewCell.xib in Resources */,
 				98D2C6B62A210A51003BFEFC /* LaunchScreen.storyboard in Resources */,
 				98D2C6B32A210A51003BFEFC /* Assets.xcassets in Resources */,
 				98D2C6B12A210A4B003BFEFC /* Main.storyboard in Resources */,
@@ -150,13 +177,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982CB5DD2A28CBBE0044AD69 /* PeopleTableViewCell.swift in Sources */,
+				982CB5E02A28CC5D0044AD69 /* addPeopleViewController.swift in Sources */,
 				98D2C6AE2A210A4B003BFEFC /* ViewController.swift in Sources */,
 				985D00BD2A25E12B00083FEB /* addMenusViewController.swift in Sources */,
-				985D00BB2A25E11000083FEB /* addPeopleViewController.swift in Sources */,
 				98D2C6AA2A210A4B003BFEFC /* AppDelegate.swift in Sources */,
+				982CB5D82A28CB2B0044AD69 /* PeopleTableViewController.swift in Sources */,
 				98D2C6AC2A210A4B003BFEFC /* SceneDelegate.swift in Sources */,
 				985D00C12A25E16800083FEB /* browseViewController.swift in Sources */,
+				98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */,
 				985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */,
+				985D00C32A25E4B300083FEB /* introViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +403,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98551C962A25E86800C79B45 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98551C972A25E86800C79B45 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98551C962A25E86800C79B45 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		98551C992A25E86800C79B45 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98551C962A25E86800C79B45 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98D2C69E2A210A4B003BFEFC /* Project object */;
 }
