@@ -61,6 +61,10 @@ class PeopleTableViewController: UITableViewController {
         
     }
     
+    @IBAction func click(){
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

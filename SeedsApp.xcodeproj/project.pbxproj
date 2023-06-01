@@ -11,6 +11,8 @@
 		982CB5DD2A28CBBE0044AD69 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */; };
 		982CB5DE2A28CBBE0044AD69 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */; };
 		982CB5E02A28CC5D0044AD69 /* addPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */; };
+		982CB5E22A2919EA0044AD69 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5E12A2919EA0044AD69 /* homeViewController.swift */; };
+		982CB5E42A291A000044AD69 /* topThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5E32A291A000044AD69 /* topThreeViewController.swift */; };
 		98551C982A25E86800C79B45 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C972A25E86800C79B45 /* Realm */; };
 		98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C992A25E86800C79B45 /* RealmSwift */; };
 		98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98551C9B2A260F2E00C79B45 /* Memo.swift */; };
@@ -31,6 +33,8 @@
 		982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPeopleViewController.swift; sourceTree = "<group>"; };
+		982CB5E12A2919EA0044AD69 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		982CB5E32A291A000044AD69 /* topThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topThreeViewController.swift; sourceTree = "<group>"; };
 		98551C9B2A260F2E00C79B45 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Memo.swift; path = Assets.xcassets/Memo.swift; sourceTree = "<group>"; };
 		985D00BC2A25E12B00083FEB /* addMenusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMenusViewController.swift; sourceTree = "<group>"; };
 		985D00BE2A25E15200083FEB /* generateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +91,10 @@
 				982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */,
 				982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */,
 				985D00BC2A25E12B00083FEB /* addMenusViewController.swift */,
-				985D00C02A25E16800083FEB /* browseViewController.swift */,
+				982CB5E12A2919EA0044AD69 /* homeViewController.swift */,
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
+				982CB5E32A291A000044AD69 /* topThreeViewController.swift */,
+				985D00C02A25E16800083FEB /* browseViewController.swift */,
 				98551C9B2A260F2E00C79B45 /* Memo.swift */,
 				98D2C6AF2A210A4B003BFEFC /* Main.storyboard */,
 				98D2C6B22A210A51003BFEFC /* Assets.xcassets */,
@@ -183,7 +189,9 @@
 				985D00BD2A25E12B00083FEB /* addMenusViewController.swift in Sources */,
 				98D2C6AA2A210A4B003BFEFC /* AppDelegate.swift in Sources */,
 				982CB5D82A28CB2B0044AD69 /* PeopleTableViewController.swift in Sources */,
+				982CB5E42A291A000044AD69 /* topThreeViewController.swift in Sources */,
 				98D2C6AC2A210A4B003BFEFC /* SceneDelegate.swift in Sources */,
+				982CB5E22A2919EA0044AD69 /* homeViewController.swift in Sources */,
 				985D00C12A25E16800083FEB /* browseViewController.swift in Sources */,
 				98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */,
 				985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */,
