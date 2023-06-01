@@ -6,22 +6,41 @@
 //
 
 import UIKit
+import RealmSwift
 
-class addPeopleViewController: UIViewController {
+class addPeopleViewController: UIViewController, UITextFieldDelegate {
+    
+    
     
     @IBOutlet var nameInput: UITextField!
+    
+    let realm = try! Realm()
     
     var peopleArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameInput.delegate = self
+        
+        let memo : Memo? = read()
+        
+        nameInput.text = memo?.personName
 
         // Do any additional setup after loading the view.
     }
     
+    func read() -> Memo? {
+        return realm.objects(Memo.self).first
+        
+    }
+    
     @IBAction func saveWord(){
           
-    
+        let personName: String = nameInput.text!
+        let memo : Memo? = read()
+        
+        
             
             if nameInput.text == "" {
                 let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
@@ -32,7 +51,19 @@ class addPeopleViewController: UIViewController {
                 peopleArray.append(nameInput.text!)
                 //save to DB
                 
-                
+                if memo != nil {
+                    try! realm.write{
+                        memo!.personName = personName
+                    }
+                }else{
+                    let newMemo = Memo()
+                    newMemo.personName = personName
+                    
+                    try! realm.write{
+                        realm.add(newMemo)
+                    }
+                  
+                }
                 
                 let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -42,6 +73,10 @@ class addPeopleViewController: UIViewController {
             
             nameInput.text = ""
         }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 
     /*
     // MARK: - Navigation

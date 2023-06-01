@@ -89,7 +89,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="mIz-vJ-qAj">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="ATA-6S-uKr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ATA-6S-uKr">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="hF8-5q-KQd" kind="show" id="Y7K-Um-8yd"/>

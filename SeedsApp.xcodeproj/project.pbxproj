@@ -84,16 +84,16 @@
 				985D00C22A25E4B300083FEB /* introViewController.swift */,
 				982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */,
 				982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */,
-				982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */,
 				982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */,
+				982CB5DF2A28CC5D0044AD69 /* addPeopleViewController.swift */,
 				985D00BC2A25E12B00083FEB /* addMenusViewController.swift */,
 				985D00C02A25E16800083FEB /* browseViewController.swift */,
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
+				98551C9B2A260F2E00C79B45 /* Memo.swift */,
 				98D2C6AF2A210A4B003BFEFC /* Main.storyboard */,
 				98D2C6B22A210A51003BFEFC /* Assets.xcassets */,
 				98D2C6B42A210A51003BFEFC /* LaunchScreen.storyboard */,
 				98D2C6B72A210A51003BFEFC /* Info.plist */,
-				98551C9B2A260F2E00C79B45 /* Memo.swift */,
 			);
 			path = SeedsApp;
 			sourceTree = "<group>";
