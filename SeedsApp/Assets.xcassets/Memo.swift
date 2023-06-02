@@ -12,3 +12,4 @@ class Memo: Object{
     @objc dynamic var personName: String = ""
     
 }
+
