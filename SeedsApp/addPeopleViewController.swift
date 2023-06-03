@@ -48,12 +48,17 @@ class addPeopleViewController: UIViewController, UITextFieldDelegate {
                 present(alert, animated: true, completion: nil)
                 
             }else{
-                peopleArray.append(nameInput.text!)
+                peopleArray.append(personName)
                 //save to DB
+                
+                print(personName)
+                
                 
                 if memo != nil {
                     try! realm.write{
                         memo!.personName = personName
+                        
+                        print("success! 1 ")
                     }
                 }else{
                     let newMemo = Memo()
@@ -61,11 +66,18 @@ class addPeopleViewController: UIViewController, UITextFieldDelegate {
                     
                     try! realm.write{
                         realm.add(newMemo)
+                        print("success 2")
                     }
                   
                 }
                 
-                let alert = UIAlertController(title: "保存完了", message: "単語の登録が完了しました", preferredStyle: .alert)
+                let info = realm.objects(Memo.self)
+               // let name = info.personName
+                
+                print(info)
+                //print(name)
+                
+                let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
             }

@@ -46,13 +46,18 @@ class PeopleTableViewController: UITableViewController {
         return peopleArray.count
         
     }
-
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PeopleTableViewCell
                    
                    
        // let nowIndex = peopleArray[indexPath.row]
+        
+    
+        let info = realm.objects(Memo.self)
+       
     
         cell.personName.text = peopleArray[indexPath.row]
       
@@ -61,10 +66,7 @@ class PeopleTableViewController: UITableViewController {
         
     }
     
-    @IBAction func click(){
-        
-    }
-    
+ 
 
     /*
     // Override to support conditional editing of the table view.

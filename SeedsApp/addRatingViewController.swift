@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class addRatingViewController: UIViewController, UITextFieldDelegate {
+class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var menuName: UITextField!
     @IBOutlet var rateOne: UITextField!
@@ -40,7 +40,10 @@ class addRatingViewController: UIViewController, UITextFieldDelegate {
         
         // set people's name label
         
+        let info = realm.objects(Memo.self).first!
         
+        //nameOne.text = String(info)
+        //nameTwo.text
         
         
 
@@ -51,21 +54,143 @@ class addRatingViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // function for when click on picture button
+
+
+    func presentPickerController(sourceType: UIImagePickerController.SourceType){
+           if UIImagePickerController.isSourceTypeAvailable(sourceType){
+               let picker = UIImagePickerController()
+               picker.sourceType = sourceType
+               picker.delegate = self
+               self.present(picker, animated: true, completion: nil)
+           }
+       }
     
-    
-    // function for when click on picture button 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            self.dismiss(animated: true, completion: nil)
+            
+            
+        }
+       
+       /*
     
     @IBAction func choosePic(){
+    
+        presentPickerController(sourceType: .photoLibrary)
+        //let picture: String = nameInput.text!
+        let picture : Menu? = read()
         
+        
+          /*
+            if nameInput.text == "" {
+                let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                
+            }else{
+           
+          
+        
+                peopleArray.append(personName)
+                //save to DB
+                
+           */
+            
+                
+                
+                if picture != nil {
+                    try! realm.write{
+                        picture!.picture = picture
+                        
+                        print("success! 1 ")
+                    }
+                }else{
+                    let newMemo = Menu()
+                    newMemo.picture = picture
+                    
+                    try! realm.write{
+                        realm.add(newMemo)
+                        print("success 2")
+                    }
+                  
+                }
+                
+                let info = realm.objects(Menu.self)
+               // let name = info.personName
+                
+                print(info)
+                //print(name)
+                
+                let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+            }
+            
         
     }
+        
+        */
     
     // add all inputs to database
     
     @IBAction func saveMenu(){
         
+        let menuNameTemp: String = menuName.text!
+        let ratingOne: String = rateOne.text!
+        let ratingTwo: String = rateTwo.text!
+        let ratingThree: String = rateThree.text!
+        
+        let menu : Menu? = read()
         
         
+        if menuName.text == "" || rateOne.text == "" || rateTwo.text == "" || rateThree.text == "" {
+            let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            
+        }else{
+            //peopleArray.append(personName)
+            //save to DB
+            
+          
+            
+            if menu != nil {
+                try! realm.write{
+                    menu!.name = menuNameTemp
+                    menu!.rate1 = Int(ratingOne) ?? 0
+                    menu!.rate2 = Int(ratingTwo) ?? 0
+                    menu!.rate3 = Int(ratingThree) ?? 0
+                    
+                    print("success! 1 ")
+                }
+            }else{
+                let newMenu = Menu()
+                newMenu.name = menuNameTemp
+                newMenu.rate1 = Int(ratingOne) ?? 0
+                newMenu.rate2 = Int(ratingTwo) ?? 0
+                newMenu.rate3 = Int(ratingThree) ?? 0
+                
+                
+                try! realm.write{
+                    realm.add(newMenu)
+                    print("success 2")
+                }
+              
+            }
+            
+            let info = realm.objects(Menu.self)
+           // let name = info.personName
+            
+            print(info)
+            //print(name)
+            
+            let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
+       
         
     }
     

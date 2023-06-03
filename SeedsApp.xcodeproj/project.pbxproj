@@ -18,6 +18,7 @@
 		982CB5EA2A29EDE10044AD69 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982CB5E82A29EDE10044AD69 /* MenuTableViewCell.xib */; };
 		982CB5EC2A29EE040044AD69 /* addRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */; };
 		982CB5EE2A2A088A0044AD69 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5ED2A2A088A0044AD69 /* Menu.swift */; };
+		982CB5F02A2B90180044AD69 /* home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5EF2A2B90170044AD69 /* home2ViewController.swift */; };
 		98551C982A25E86800C79B45 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C972A25E86800C79B45 /* Realm */; };
 		98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C992A25E86800C79B45 /* RealmSwift */; };
 		98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98551C9B2A260F2E00C79B45 /* Memo.swift */; };
@@ -44,6 +45,7 @@
 		982CB5E82A29EDE10044AD69 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addRatingViewController.swift; sourceTree = "<group>"; };
 		982CB5ED2A2A088A0044AD69 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		982CB5EF2A2B90170044AD69 /* home2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home2ViewController.swift; sourceTree = "<group>"; };
 		98551C9B2A260F2E00C79B45 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Memo.swift; path = Assets.xcassets/Memo.swift; sourceTree = "<group>"; };
 		985D00BE2A25E15200083FEB /* generateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateViewController.swift; sourceTree = "<group>"; };
 		985D00C02A25E16800083FEB /* browseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browseViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				982CB5E82A29EDE10044AD69 /* MenuTableViewCell.xib */,
 				982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */,
 				982CB5E12A2919EA0044AD69 /* homeViewController.swift */,
+				982CB5EF2A2B90170044AD69 /* home2ViewController.swift */,
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
 				982CB5E32A291A000044AD69 /* topThreeViewController.swift */,
 				985D00C02A25E16800083FEB /* browseViewController.swift */,
@@ -203,6 +206,7 @@
 				98D2C6AE2A210A4B003BFEFC /* ViewController.swift in Sources */,
 				98D2C6AA2A210A4B003BFEFC /* AppDelegate.swift in Sources */,
 				982CB5D82A28CB2B0044AD69 /* PeopleTableViewController.swift in Sources */,
+				982CB5F02A2B90180044AD69 /* home2ViewController.swift in Sources */,
 				982CB5E42A291A000044AD69 /* topThreeViewController.swift in Sources */,
 				98D2C6AC2A210A4B003BFEFC /* SceneDelegate.swift in Sources */,
 				982CB5EC2A29EE040044AD69 /* addRatingViewController.swift in Sources */,
