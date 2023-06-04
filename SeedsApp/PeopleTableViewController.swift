@@ -12,12 +12,22 @@ class PeopleTableViewController: UITableViewController {
 
     let realm = try! Realm()
     
-    var peopleArray: [String] = []
+    var peopleArray = GlobalVariables.peopleArray
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
+        print("test")
+        
+        // not showing up !!
+        
+        var peopleArray = GlobalVariables.peopleArray
+        
+        print(peopleArray)
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,12 +50,7 @@ class PeopleTableViewController: UITableViewController {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-       
-        return peopleArray.count
-        
-    }
+   
     
     
     
@@ -56,16 +61,26 @@ class PeopleTableViewController: UITableViewController {
        // let nowIndex = peopleArray[indexPath.row]
         
     
-        let info = realm.objects(Memo.self)
+        //let info = realm.objects(Memo.self)
        
     
         cell.personName.text = peopleArray[indexPath.row]
-      
+        
+        print("test")
+        print(peopleArray)
+        print(peopleArray[indexPath.row])
+    
 
         return cell
         
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+       
+        return peopleArray.count
+        
+    }
  
 
     /*

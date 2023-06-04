@@ -8,15 +8,21 @@
 import UIKit
 import RealmSwift
 
-class addPeopleViewController: UIViewController, UITextFieldDelegate {
+struct GlobalVariables {
+    static var peopleArray: [String] = []
+}
+
+class addPeopleViewController: UIViewController,    UITextFieldDelegate {
     
+    // Get value
     
+    var peopleArray = GlobalVariables.peopleArray
+  
     
     @IBOutlet var nameInput: UITextField!
     
     let realm = try! Realm()
     
-    var peopleArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +32,8 @@ class addPeopleViewController: UIViewController, UITextFieldDelegate {
         let memo : Memo? = read()
         
         nameInput.text = memo?.personName
+        
+        print(peopleArray)
 
         // Do any additional setup after loading the view.
     }
@@ -70,11 +78,26 @@ class addPeopleViewController: UIViewController, UITextFieldDelegate {
                     }
                   
                 }
+            
+         
+                    let dictionary: [String: Any] =
+                        [
+                         "person": []
+                                   
+                        ]
+
+                    let menu = Memo(value: dictionary) //Taskモデルのインスタンスの作成
+
+                    //書き込み処理
+                    try! realm.write {
+                        realm.add(menu)
+                        print(menu)
+                    }
                 
                 let info = realm.objects(Memo.self)
                // let name = info.personName
                 
-                print(info)
+                //print(info)
                 //print(name)
                 
                 let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
@@ -84,7 +107,9 @@ class addPeopleViewController: UIViewController, UITextFieldDelegate {
             
             
             nameInput.text = ""
+        print(peopleArray)
         }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
