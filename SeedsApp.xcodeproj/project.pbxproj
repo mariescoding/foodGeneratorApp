@@ -21,10 +21,10 @@
 		982CB5F02A2B90180044AD69 /* home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5EF2A2B90170044AD69 /* home2ViewController.swift */; };
 		98551C982A25E86800C79B45 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C972A25E86800C79B45 /* Realm */; };
 		98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C992A25E86800C79B45 /* RealmSwift */; };
-		98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98551C9B2A260F2E00C79B45 /* Memo.swift */; };
 		985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00BE2A25E15200083FEB /* generateViewController.swift */; };
 		985D00C12A25E16800083FEB /* browseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00C02A25E16800083FEB /* browseViewController.swift */; };
 		985D00C32A25E4B300083FEB /* introViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00C22A25E4B300083FEB /* introViewController.swift */; };
+		985D40B02A2DBC070028439E /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D40AF2A2DBC070028439E /* Memo.swift */; };
 		98D2C6AA2A210A4B003BFEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */; };
 		98D2C6AC2A210A4B003BFEFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */; };
 		98D2C6AE2A210A4B003BFEFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D2C6AD2A210A4B003BFEFC /* ViewController.swift */; };
@@ -46,10 +46,10 @@
 		982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addRatingViewController.swift; sourceTree = "<group>"; };
 		982CB5ED2A2A088A0044AD69 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		982CB5EF2A2B90170044AD69 /* home2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home2ViewController.swift; sourceTree = "<group>"; };
-		98551C9B2A260F2E00C79B45 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Memo.swift; path = Assets.xcassets/Memo.swift; sourceTree = "<group>"; };
 		985D00BE2A25E15200083FEB /* generateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateViewController.swift; sourceTree = "<group>"; };
 		985D00C02A25E16800083FEB /* browseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browseViewController.swift; sourceTree = "<group>"; };
 		985D00C22A25E4B300083FEB /* introViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introViewController.swift; sourceTree = "<group>"; };
+		985D40AF2A2DBC070028439E /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		98D2C6A62A210A4B003BFEFC /* SeedsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeedsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
 				982CB5E32A291A000044AD69 /* topThreeViewController.swift */,
 				985D00C02A25E16800083FEB /* browseViewController.swift */,
-				98551C9B2A260F2E00C79B45 /* Memo.swift */,
+				985D40AF2A2DBC070028439E /* Memo.swift */,
 				982CB5ED2A2A088A0044AD69 /* Menu.swift */,
 				98D2C6AF2A210A4B003BFEFC /* Main.storyboard */,
 				98D2C6B22A210A51003BFEFC /* Assets.xcassets */,
@@ -213,7 +213,7 @@
 				982CB5EE2A2A088A0044AD69 /* Menu.swift in Sources */,
 				982CB5E22A2919EA0044AD69 /* homeViewController.swift in Sources */,
 				985D00C12A25E16800083FEB /* browseViewController.swift in Sources */,
-				98551C9C2A260F2E00C79B45 /* Memo.swift in Sources */,
+				985D40B02A2DBC070028439E /* Memo.swift in Sources */,
 				985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */,
 				985D00C32A25E4B300083FEB /* introViewController.swift in Sources */,
 			);

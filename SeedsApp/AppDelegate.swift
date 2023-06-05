@@ -16,11 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let config = Realm.Configuration(
-            schemaVersion: 1,
+            schemaVersion: 2,
             migrationBlock: nil,
             deleteRealmIfMigrationNeeded: true
         )
-        Realm.Configuration.defaultConfiguration = config 
+        Realm.Configuration.defaultConfiguration = config
+       
+        //migrationRealm()
+        //print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        let realm = try! Realm()
+        
         return true
     }
 

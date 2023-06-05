@@ -2,8 +2,9 @@
 //  Memo.swift
 //  SeedsApp
 //
-//  Created by Marie Muramatsu on 30/5/23.
+//  Created by Marie Muramatsu on 5/6/23.
 //
+
 
 import Foundation
 import RealmSwift
@@ -19,3 +20,4 @@ class Memo: Object{
 class People: Object {
     @objc dynamic var people: String = ""
 }
+

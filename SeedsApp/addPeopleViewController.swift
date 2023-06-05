@@ -29,7 +29,8 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
         
         nameInput.delegate = self
         
-        let memo : Memo? = read()
+        let memo : Memo? = readMemo()
+        let people : People? = readPeople()
         
         nameInput.text = memo?.personName
         
@@ -38,18 +39,22 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func read() -> Memo? {
+    func readMemo() -> Memo? {
         return realm.objects(Memo.self).first
+        
+    }
+    
+    func readPeople() -> People? {
+        return realm.objects(People.self).first
         
     }
     
     @IBAction func saveWord(){
           
-        let personName: String = nameInput.text!
-        let memo : Memo? = read()
+        var personName: String = nameInput.text!
+        let memo : Memo? = readMemo()
+        let people : People? = readPeople()
         
-        
-            
             if nameInput.text == "" {
                 let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
@@ -60,17 +65,18 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
                 //save to DB
                 
                 print(personName)
+                //let p = people!.people(value: personName)
                 
                 
                 if memo != nil {
                     try! realm.write{
-                        memo!.personName = personName
+                        memo!.personNames.append(people!.)
                         
                         print("success! 1 ")
                     }
                 }else{
                     let newMemo = Memo()
-                    newMemo.personName = personName
+                    newMemo.personNames.append(People(value: personName))
                     
                     try! realm.write{
                         realm.add(newMemo)
@@ -80,20 +86,7 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
                 }
             
          
-                    let dictionary: [String: Any] =
-                        [
-                         "person": []
-                                   
-                        ]
-
-                    let menu = Memo(value: dictionary) //Taskモデルのインスタンスの作成
-
-                    //書き込み処理
-                    try! realm.write {
-                        realm.add(menu)
-                        print(menu)
-                    }
-                
+                  
                 let info = realm.objects(Memo.self)
                // let name = info.personName
                 
