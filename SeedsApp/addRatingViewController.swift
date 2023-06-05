@@ -21,10 +21,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     @IBOutlet var nameThree: UILabel!
     
     let realm = try! Realm()
-    
-    var menuArray: [String] = []
-
-    
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()

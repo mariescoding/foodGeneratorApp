@@ -19,6 +19,5 @@ class Menu: Object{
     @objc dynamic var rate2: Int = 0
     @objc dynamic var rate3: Int = 0
     
-    
-    
 }
+

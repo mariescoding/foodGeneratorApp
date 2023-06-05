@@ -8,16 +8,10 @@
 import UIKit
 import RealmSwift
 
-struct GlobalVariables {
-    static var peopleArray: [String] = []
-}
 
 class addPeopleViewController: UIViewController,    UITextFieldDelegate {
     
-    // Get value
-    
-    var peopleArray = GlobalVariables.peopleArray
-  
+
     
     @IBOutlet var nameInput: UITextField!
     

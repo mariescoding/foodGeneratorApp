@@ -11,23 +11,17 @@ import RealmSwift
 class PeopleTableViewController: UITableViewController {
 
     let realm = try! Realm()
-    
-   
-    
-    var peopleArray = GlobalVariables.peopleArray
+    var objects: Results<People>!
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        objects = realm.objects(People.self)
+        print(objects)
+        
         tableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        print("test")
-        
-        // not showing up !!
-        
-        var peopleArray = GlobalVariables.peopleArray
-        
-        print(peopleArray)
         
         
 
@@ -56,19 +50,13 @@ class PeopleTableViewController: UITableViewController {
 
    
     
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PeopleTableViewCell
         
         
-                   
-       // let nowIndex = peopleArray[indexPath.row]
+        let object = objects[indexPath.row]
         
-    
-        //let info = realm.objects(Memo.self)
-        let info2 = realm.objects(People.self)
-        print("table" , info2)
+        cell.personName.text = object.people
        
         // convert data in info2 to array
         
@@ -76,11 +64,6 @@ class PeopleTableViewController: UITableViewController {
         
         //cell.personName.text = info2[indexPath.row]
         
-        print("test")
-        
-        //print(peopleArray[indexPath.row])
-    
-
         return cell
         
     }
@@ -90,7 +73,7 @@ class PeopleTableViewController: UITableViewController {
        
         
         // get number of people in the DB
-        return 1
+        return objects.count
         
     }
  
