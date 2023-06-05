@@ -64,7 +64,7 @@ class generateViewController: UIViewController {
     }
     
     @IBAction func generateMenu(){
-        //algorithm to decide top 3
+    //algorithm to decide top 3
         
         // get menus from DB, create menuArray
         

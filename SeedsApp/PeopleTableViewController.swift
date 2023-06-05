@@ -12,6 +12,8 @@ class PeopleTableViewController: UITableViewController {
 
     let realm = try! Realm()
     
+   
+    
     var peopleArray = GlobalVariables.peopleArray
     
     override func viewDidLoad() {
@@ -38,7 +40,9 @@ class PeopleTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
-            
+        
+            let info2 = realm.objects(People.self)
+            print("table" , info2)
                 
             tableView.reloadData()
             }
@@ -56,19 +60,25 @@ class PeopleTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PeopleTableViewCell
-                   
+        
+        
                    
        // let nowIndex = peopleArray[indexPath.row]
         
     
         //let info = realm.objects(Memo.self)
+        let info2 = realm.objects(People.self)
+        print("table" , info2)
        
-    
-        cell.personName.text = peopleArray[indexPath.row]
+        // convert data in info2 to array
+        
+        // use loop?
+        
+        //cell.personName.text = info2[indexPath.row]
         
         print("test")
-        print(peopleArray)
-        print(peopleArray[indexPath.row])
+        
+        //print(peopleArray[indexPath.row])
     
 
         return cell
@@ -78,7 +88,9 @@ class PeopleTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
        
-        return peopleArray.count
+        
+        // get number of people in the DB
+        return 1
         
     }
  

@@ -34,7 +34,7 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
         
         nameInput.text = memo?.personName
         
-        print(peopleArray)
+        //print(peopleArray)
 
         // Do any additional setup after loading the view.
     }
@@ -61,7 +61,7 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
                 present(alert, animated: true, completion: nil)
                 
             }else{
-                peopleArray.append(personName)
+              //  peopleArray.append(personName)
                 //save to DB
                 
                 print(personName)
@@ -70,27 +70,42 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
                 
                 if memo != nil {
                     try! realm.write{
-                        memo!.personNames.append(people!.)
+                        //memo!.personNames.append(People(value: personName))
+                        let newPerson = People()
+                        let newMemo = Memo()
+
+                        newPerson.people = personName
+
+                        newMemo.personNames.append(newPerson)
+                        realm.add(newMemo)
                         
                         print("success! 1 ")
                     }
                 }else{
                     let newMemo = Memo()
-                    newMemo.personNames.append(People(value: personName))
+                    //newMemo.personNames.append(People(value: personName))
+                    
+                    let newPerson = People()
+
+                    newPerson.people = personName
+
+                    newMemo.personNames.append(newPerson)
                     
                     try! realm.write{
                         realm.add(newMemo)
+                        
                         print("success 2")
                     }
                   
                 }
             
-         
-                  
                 let info = realm.objects(Memo.self)
-               // let name = info.personName
                 
-                //print(info)
+                let info2 = realm.objects(People.self)
+               
+                
+                print(info)
+                print(info2)
                 //print(name)
                 
                 let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
@@ -100,7 +115,7 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
             
             
             nameInput.text = ""
-        print(peopleArray)
+       // print(peopleArray)
         }
     
     
