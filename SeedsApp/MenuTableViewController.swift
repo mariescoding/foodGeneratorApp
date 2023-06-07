@@ -11,13 +11,13 @@ import RealmSwift
 class MenuTableViewController: UITableViewController {
     
     let realm = try! Realm()
-    
-    var menuArray: [String] = []
-
+    var menuObject : Results<Menu>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        menuObject = realm.objects(Menu.self)
+        
         tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         // Uncomment the following line to preserve selection between presentations
@@ -30,7 +30,9 @@ class MenuTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
             
-                
+        let info2 = realm.objects(People.self)
+        print("table" , info2)
+        
             tableView.reloadData()
             }
 
@@ -41,23 +43,23 @@ class MenuTableViewController: UITableViewController {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return menuArray.count
-    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuTableViewCell
 
-        // Configure the cell...
+        let object = menuObject[indexPath.row]
         
-        cell.menuName.text = menuArray[indexPath.row]
+        cell.menuName.text = object.name
 
         return cell
     }
     
-    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return menuObject.count
+    }
+
     
 
     /*

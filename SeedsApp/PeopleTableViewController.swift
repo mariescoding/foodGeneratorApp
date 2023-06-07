@@ -58,6 +58,7 @@ class PeopleTableViewController: UITableViewController {
         
         cell.personName.text = object.people
        
+        
         // convert data in info2 to array
         
         // use loop?

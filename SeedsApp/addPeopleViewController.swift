@@ -11,8 +11,6 @@ import RealmSwift
 
 class addPeopleViewController: UIViewController,    UITextFieldDelegate {
     
-
-    
     @IBOutlet var nameInput: UITextField!
     
     let realm = try! Realm()
@@ -23,30 +21,28 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
         
         nameInput.delegate = self
         
-        let memo : Memo? = readMemo()
+     //   let memo : Memo? = readMemo()
         let people : People? = readPeople()
         
-        nameInput.text = memo?.personName
         
-        //print(peopleArray)
-
-        // Do any additional setup after loading the view.
     }
-    
+    /*
     func readMemo() -> Memo? {
         return realm.objects(Memo.self).first
         
     }
+     */
     
     func readPeople() -> People? {
+        
         return realm.objects(People.self).first
         
     }
     
     @IBAction func saveWord(){
           
-        var personName: String = nameInput.text!
-        let memo : Memo? = readMemo()
+        let personName: String = nameInput.text!
+        
         let people : People? = readPeople()
         
             if nameInput.text == "" {
@@ -55,61 +51,40 @@ class addPeopleViewController: UIViewController,    UITextFieldDelegate {
                 present(alert, animated: true, completion: nil)
                 
             }else{
-              //  peopleArray.append(personName)
-                //save to DB
-                
-                print(personName)
-                //let p = people!.people(value: personName)
-                
-                
-                if memo != nil {
+                if people != nil {
                     try! realm.write{
-                        //memo!.personNames.append(People(value: personName))
+                       
                         let newPerson = People()
-                        let newMemo = Memo()
 
                         newPerson.people = personName
 
-                        newMemo.personNames.append(newPerson)
-                        realm.add(newMemo)
+                        realm.add(newPerson)
                         
-                        print("success! 1 ")
                     }
                 }else{
-                    let newMemo = Memo()
-                    //newMemo.personNames.append(People(value: personName))
-                    
+
                     let newPerson = People()
 
                     newPerson.people = personName
-
-                    newMemo.personNames.append(newPerson)
-                    
+                   
                     try! realm.write{
-                        realm.add(newMemo)
+                        realm.add(newPerson)
                         
-                        print("success 2")
                     }
                   
                 }
             
-                let info = realm.objects(Memo.self)
-                
                 let info2 = realm.objects(People.self)
-               
                 
-                print(info)
                 print(info2)
-                //print(name)
-                
+            
                 let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
             }
             
-            
             nameInput.text = ""
-       // print(peopleArray)
+      
         }
     
     

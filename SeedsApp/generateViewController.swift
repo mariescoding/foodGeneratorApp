@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class generateViewController: UIViewController {
     
@@ -15,31 +16,37 @@ class generateViewController: UIViewController {
     
     var peopleHere :[String] = []
     
+    let realm = try! Realm()
+    
+    var peopleObj: Results<People>!
+    var menuObj: Results<Menu>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // get peopleNames from DB
         
-        
-        
+        peopleObj = realm.objects(People.self)
         
         // set button texts to peopleNames
         
-        
-        
-        
-
+        person1Btn.setTitle(peopleObj[0].people, for: .normal)
+        person2Btn.setTitle(peopleObj[1].people, for: .normal)
+        person3Btn.setTitle(peopleObj[2].people, for: .normal)
      
+        person1Btn.backgroundColor = UIColor.gray
+        
     }
     
     @IBAction func personOneClick(){
         // color change
         
         person1Btn.isEnabled = true
+        person1Btn.backgroundColor = UIColor.orange
         
         // add to array;
-        peopleHere.append("")
+        peopleHere.append("1")
+        print(peopleHere)
         
     }
     
@@ -49,7 +56,8 @@ class generateViewController: UIViewController {
         person1Btn.isEnabled = true
         
         // add to array
-        peopleHere.append("")
+        peopleHere.append("2")
+        print(peopleHere)
         
     }
     
@@ -59,7 +67,8 @@ class generateViewController: UIViewController {
         person1Btn.isEnabled = true
         
         // add to array
-        peopleHere.append("")
+        peopleHere.append("3")
+        print(peopleHere)
         
     }
     
@@ -68,8 +77,7 @@ class generateViewController: UIViewController {
         
         // get menus from DB, create menuArray
         
-        var menuArray: [String] = []
-        
+       
         
         
         

@@ -15,7 +15,6 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     @IBOutlet var rateTwo: UITextField!
     @IBOutlet var rateThree: UITextField!
     
-    
     @IBOutlet var nameOne: UILabel!
     @IBOutlet var nameTwo: UILabel!
     @IBOutlet var nameThree: UILabel!
@@ -33,10 +32,6 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
       
         let menu : Menu? = read()
         
-        menuName.text = menu?.name
-        
-        // set people's name label
-        
         objects = realm.objects(People.self)
         
         nameOne.text = objects[0].people
@@ -44,11 +39,9 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
         nameTwo.text = objects[1].people
         
         nameThree.text = objects[2].people
+    
         
-        print(objects)
-        print(objects[0].people)
-        
-        
+    
 
     }
     
@@ -58,7 +51,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     }
     
     // function for when click on picture button
-
+    /*
 
     func presentPickerController(sourceType: UIImagePickerController.SourceType){
            if UIImagePickerController.isSourceTypeAvailable(sourceType){
@@ -75,7 +68,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
             
         }
        
-       /*
+       
     
     @IBAction func choosePic(){
     
@@ -145,26 +138,23 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
         
         let menu : Menu? = read()
         
-        
         if menuName.text == "" || rateOne.text == "" || rateTwo.text == "" || rateThree.text == "" {
             let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             
         }else{
-            //peopleArray.append(personName)
-            //save to DB
-            
           
-            
             if menu != nil {
                 try! realm.write{
-                    menu!.name = menuNameTemp
-                    menu!.rate1 = Int(ratingOne) ?? 0
-                    menu!.rate2 = Int(ratingTwo) ?? 0
-                    menu!.rate3 = Int(ratingThree) ?? 0
+                    let newMenu = Menu()
                     
-                    print("success! 1 ")
+                    newMenu.name = menuNameTemp
+                    newMenu.rate1 = Int(ratingOne) ?? 0
+                    newMenu.rate2 = Int(ratingTwo) ?? 0
+                    newMenu.rate3 = Int(ratingThree) ?? 0
+                    realm.add(newMenu)
+                    
                 }
             }else{
                 let newMenu = Menu()
@@ -173,21 +163,18 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
                 newMenu.rate2 = Int(ratingTwo) ?? 0
                 newMenu.rate3 = Int(ratingThree) ?? 0
                 
-                
                 try! realm.write{
                     realm.add(newMenu)
-                    print("success 2")
+
                 }
               
             }
             
             let info = realm.objects(Menu.self)
-           // let name = info.personName
-            
+      
             print(info)
-            //print(name)
             
-            let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
+            let alert = UIAlertController(title: "保存完了", message:  "新しいメニューの登録が完了しました", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
