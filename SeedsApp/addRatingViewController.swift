@@ -51,7 +51,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     }
     
     // function for when click on picture button
-    /*
+    
 
     func presentPickerController(sourceType: UIImagePickerController.SourceType){
            if UIImagePickerController.isSourceTypeAvailable(sourceType){
@@ -64,7 +64,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             self.dismiss(animated: true, completion: nil)
-            
+            print(info[.originalImage])
             
         }
        
@@ -73,26 +73,11 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     @IBAction func choosePic(){
     
         presentPickerController(sourceType: .photoLibrary)
+        
+        
         //let picture: String = nameInput.text!
         let picture : Menu? = read()
-        
-        
-          /*
-            if nameInput.text == "" {
-                let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
-                present(alert, animated: true, completion: nil)
-                
-            }else{
-           
-          
-        
-                peopleArray.append(personName)
-                //save to DB
-                
-           */
-            
-                
+        /*
                 
                 if picture != nil {
                     try! realm.write{
@@ -122,10 +107,10 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
                 present(alert, animated: true, completion: nil)
             }
             
-        
+        */
     }
         
-        */
+        
     
     // add all inputs to database
     
