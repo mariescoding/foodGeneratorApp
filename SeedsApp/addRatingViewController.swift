@@ -21,7 +21,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     @IBOutlet var nameThree: UILabel!
     
     let realm = try! Realm()
- 
+    var objects: Results<People>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +37,16 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
         
         // set people's name label
         
-        let info = realm.objects(Memo.self).first!
+        objects = realm.objects(People.self)
         
-        //nameOne.text = String(info)
-        //nameTwo.text
+        nameOne.text = objects[0].people
+        
+        nameTwo.text = objects[1].people
+        
+        nameThree.text = objects[2].people
+        
+        print(objects)
+        print(objects[0].people)
         
         
 

@@ -19,7 +19,7 @@ class PeopleTableViewController: UITableViewController {
         super.viewDidLoad()
         
         objects = realm.objects(People.self)
-        print(objects)
+        
         
         tableView.register(UINib(nibName: "PeopleTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
