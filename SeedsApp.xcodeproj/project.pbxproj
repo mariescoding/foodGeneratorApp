@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9815049D2A31C1F80059E001 /* browseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815049B2A31C1F80059E001 /* browseCollectionViewCell.swift */; };
+		9815049E2A31C1F80059E001 /* browseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9815049C2A31C1F80059E001 /* browseCollectionViewCell.xib */; };
 		982CB5D82A28CB2B0044AD69 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */; };
 		982CB5DD2A28CBBE0044AD69 /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */; };
 		982CB5DE2A28CBBE0044AD69 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9815049B2A31C1F80059E001 /* browseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9815049C2A31C1F80059E001 /* browseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = browseCollectionViewCell.xib; sourceTree = "<group>"; };
 		982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		982CB5DC2A28CBBE0044AD69 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				985D00BE2A25E15200083FEB /* generateViewController.swift */,
 				982CB5E32A291A000044AD69 /* topThreeViewController.swift */,
 				985D00C02A25E16800083FEB /* browseViewController.swift */,
+				9815049B2A31C1F80059E001 /* browseCollectionViewCell.swift */,
+				9815049C2A31C1F80059E001 /* browseCollectionViewCell.xib */,
 				985D40AF2A2DBC070028439E /* Memo.swift */,
 				982CB5ED2A2A088A0044AD69 /* Menu.swift */,
 				98D2C6AF2A210A4B003BFEFC /* Main.storyboard */,
@@ -186,6 +192,7 @@
 			files = (
 				982CB5DE2A28CBBE0044AD69 /* PeopleTableViewCell.xib in Resources */,
 				98D2C6B62A210A51003BFEFC /* LaunchScreen.storyboard in Resources */,
+				9815049E2A31C1F80059E001 /* browseCollectionViewCell.xib in Resources */,
 				98D2C6B32A210A51003BFEFC /* Assets.xcassets in Resources */,
 				982CB5EA2A29EDE10044AD69 /* MenuTableViewCell.xib in Resources */,
 				98D2C6B12A210A4B003BFEFC /* Main.storyboard in Resources */,
@@ -201,6 +208,7 @@
 			files = (
 				982CB5DD2A28CBBE0044AD69 /* PeopleTableViewCell.swift in Sources */,
 				982CB5E02A28CC5D0044AD69 /* addPeopleViewController.swift in Sources */,
+				9815049D2A31C1F80059E001 /* browseCollectionViewCell.swift in Sources */,
 				982CB5E92A29EDE10044AD69 /* MenuTableViewCell.swift in Sources */,
 				982CB5E62A29EDB80044AD69 /* MenuTableViewController.swift in Sources */,
 				98D2C6AE2A210A4B003BFEFC /* ViewController.swift in Sources */,

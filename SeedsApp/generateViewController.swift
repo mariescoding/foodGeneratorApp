@@ -35,16 +35,18 @@ class generateViewController: UIViewController {
         person3Btn.setTitle(peopleObj[2].people, for: .normal)
      
         person1Btn.backgroundColor = UIColor.gray
+        person2Btn.backgroundColor = UIColor.gray
+        person3Btn.backgroundColor = UIColor.gray
         
     }
     
     @IBAction func personOneClick(){
         // color change
         
-        person1Btn.isEnabled = true
         person1Btn.backgroundColor = UIColor.orange
         
         // add to array;
+        
         peopleHere.append("1")
         print(peopleHere)
         
@@ -53,9 +55,10 @@ class generateViewController: UIViewController {
     @IBAction func personTwoClick(){
         // color change
         
-        person1Btn.isEnabled = true
+        person1Btn.backgroundColor = UIColor.orange
         
         // add to array
+        
         peopleHere.append("2")
         print(peopleHere)
         
@@ -64,7 +67,7 @@ class generateViewController: UIViewController {
     @IBAction func personThreeClick(){
         // color change
         
-        person1Btn.isEnabled = true
+        person1Btn.backgroundColor = UIColor.orange
         
         // add to array
         peopleHere.append("3")
@@ -77,14 +80,15 @@ class generateViewController: UIViewController {
         
         // get menus from DB, create menuArray
         
-       
-        
+        var menuName : [String] = []
+        var avgRate : [String] = []
         
         
         // calcualte avg rate of all menus & push to avgRateArray
         
             // access DB by name
         
+     
         
         
             // if in peopleHere, add to sum
