@@ -64,7 +64,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             self.dismiss(animated: true, completion: nil)
-            print(info[.originalImage])
+        //print("picture place: ", info[.originalImage])
             
         }
        

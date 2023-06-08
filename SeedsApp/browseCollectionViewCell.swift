@@ -8,9 +8,13 @@
 import UIKit
 
 class browseCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet var menuName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
         // Initialization code
     }
 

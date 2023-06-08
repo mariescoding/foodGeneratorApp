@@ -21,12 +21,17 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return menuObj.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)as! browseCollectionViewCell
         // return card
+        
+        let object = menuObj[indexPath.row]
+        
+        cell.menuName.text = object.name
+        
         return cell
     }
 
