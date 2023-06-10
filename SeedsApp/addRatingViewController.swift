@@ -19,6 +19,8 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     @IBOutlet var nameTwo: UILabel!
     @IBOutlet var nameThree: UILabel!
     
+    @IBOutlet var photoImageView: UIImageView!
+    
     let realm = try! Realm()
     var objects: Results<People>!
 
@@ -65,6 +67,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             self.dismiss(animated: true, completion: nil)
         //print("picture place: ", info[.originalImage])
+        photoImageView.image = info[.originalImage] as? UIImage
             
         }
        

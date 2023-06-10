@@ -25,11 +25,6 @@ class PeopleTableViewController: UITableViewController {
         
         
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,11 +55,6 @@ class PeopleTableViewController: UITableViewController {
         cell.personName.text = object.people
        
         
-        // convert data in info2 to array
-        
-        // use loop?
-        
-        //cell.personName.text = info2[indexPath.row]
         
         return cell
         
