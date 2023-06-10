@@ -39,30 +39,31 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // add the code here to perform action on the cell
         let cell = collectionView.cellForItem(at: indexPath)
-        performSegue(withIdentifier: "menuDetail", sender: nil)
-        
-        print(indexPath)
+        performSegue(withIdentifier: "menuDetail", sender: indexPath)
         
     }
     
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let detailsVC = segue.destination as! menuDetailViewController
-       // let selectedRow = collectionView.indexPathForSelectedRow!.row
+       
+        let index = sender as! IndexPath
+        let selectNum = index[1]
         
-        let selectedMenu = menuObj[0]
+        let selectedMenu = menuObj[selectNum]
         
-        detailsVC.menuName.text = selectedMenu.name
+        detailsVC.nameTemp = selectedMenu.name
         
         let sum = (selectedMenu.rate1) + (selectedMenu.rate2) + (selectedMenu.rate3)
         let avg = sum / 3
         
-        detailsVC.avgRating.text = String(avg)
+        detailsVC.rateTemp = String(avg)
         
-       // detailsVC.menuImage =
+        //detailsVC.imageTemp =
         
     }
-    */
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuObj.count

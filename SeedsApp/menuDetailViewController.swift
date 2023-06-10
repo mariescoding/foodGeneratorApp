@@ -17,14 +17,19 @@ class menuDetailViewController: UIViewController {
     let realm = try! Realm()
     
     var menus: Results<Menu>!
+    
+    var nameTemp: String!
+    var imageTemp: UIImage!
+    var rateTemp: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menus = realm.objects(Menu.self)
         
-        
-        
+        menuName.text = nameTemp
+        menuImage.image = imageTemp
+        avgRating.text = rateTemp
         
         
 
