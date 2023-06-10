@@ -55,9 +55,6 @@ class generateViewController: UIViewController {
             person1Btn.backgroundColor = UIColor.orange
         }
         
- 
-       
-        
     }
     
     @IBAction func personTwoClick(){
@@ -70,8 +67,6 @@ class generateViewController: UIViewController {
             person2Btn.backgroundColor = UIColor.orange
         }
     
-      
-        
     }
     
     @IBAction func personThreeClick(){
@@ -85,10 +80,7 @@ class generateViewController: UIViewController {
             person3Btn.backgroundColor = UIColor.orange
             
         }
-        
-        
-       
-        
+   
     }
     
     @IBAction func generateMenu(){

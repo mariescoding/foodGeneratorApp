@@ -8,11 +8,85 @@
 import UIKit
 
 class topThreeViewController: UIViewController {
+    
+    @IBOutlet var menu1Btn : UIButton!
+    @IBOutlet var menu2Btn : UIButton!
+    @IBOutlet var menu3Btn : UIButton!
+    
+    var count1: Int = 0
+    var count2: Int = 0
+    var count3: Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set names of buttons
 
+        //menu1Btn.setTitle("", for: .normal)
+      //  menu2Btn.setTitle("", for: .normal)
+       // menu3Btn.setTitle("", for: .normal)
+     
+        menu1Btn.backgroundColor = UIColor.gray
+        menu2Btn.backgroundColor = UIColor.gray
+        menu3Btn.backgroundColor = UIColor.gray
+        
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func menuOneClick(){
+        
+        print("1 clciked")
+        count1 += 1
+        
+        if (count1 % 2 == 0){
+            menu1Btn.backgroundColor = UIColor.gray
+            
+        }else{
+            menu1Btn.backgroundColor = UIColor.orange
+        }
+        
+    }
+    
+    @IBAction func menuTwoClick(){
+        print("2 clciked")
+        count2 += 1
+        
+        if (count2 % 2 == 0){
+            menu2Btn.backgroundColor = UIColor.gray
+            
+        }else{
+            menu2Btn.backgroundColor = UIColor.orange
+        }
+    
+    }
+    
+    @IBAction func menuThreeClick(){
+        count3 += 1
+        
+        if (count3 % 2 == 0){
+            menu3Btn.backgroundColor = UIColor.gray
+       
+            
+        }else{
+            menu3Btn.backgroundColor = UIColor.orange
+            
+        }
+   
+    }
+    
+    @IBAction func chooseFinal(){
+        
+        // check if < 1 button clicked ; if more, give alert/ if one, continue
+        
+        
+        
+        
+        
+            // search database for menu, set home's text & image to that menu details
+        
+        
+        
     }
     
 

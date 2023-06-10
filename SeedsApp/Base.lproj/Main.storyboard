@@ -350,56 +350,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="トップ3つメニュー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-p1-aoW">
-                                <rect key="frame" x="82" y="87" width="250" height="47"/>
+                                <rect key="frame" x="82" y="68" width="250" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1つ選んでね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0J-JC-do2">
-                                <rect key="frame" x="138" y="142" width="138" height="47"/>
+                                <rect key="frame" x="134" y="123" width="138" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxN-Ez-JQS">
-                                <rect key="frame" x="121" y="249" width="152" height="79"/>
+                                <rect key="frame" x="121" y="225" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <buttonConfiguration key="configuration" style="filled" title="name" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="name">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuOneClick" destination="gUu-69-b8H" eventType="touchUpInside" id="Cbd-HY-rIX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZF-DQ-qfk">
-                                <rect key="frame" x="120" y="359" width="152" height="79"/>
+                                <rect key="frame" x="120" y="335" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <buttonConfiguration key="configuration" style="filled" title="name" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="name">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuTwoClick" destination="gUu-69-b8H" eventType="touchUpInside" id="i8d-EO-RYD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUe-lv-ush">
-                                <rect key="frame" x="120" y="465" width="152" height="79"/>
+                                <rect key="frame" x="120" y="441" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <buttonConfiguration key="configuration" style="filled" title="name" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="25"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="name">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuThreeClick" destination="gUu-69-b8H" eventType="touchUpInside" id="Tt8-cC-NnR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzk-II-5ej">
-                                <rect key="frame" x="127" y="602" width="140" height="49"/>
+                                <rect key="frame" x="75" y="597" width="257" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.74787898689999999" blue="0.25950683359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.74901960784313726" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="tintColor" red="0.99607843139999996" green="0.79607843140000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <buttonConfiguration key="configuration" style="filled" title="決める" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="決める">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
+                                    <action selector="chooseFinal" destination="gUu-69-b8H" eventType="touchUpInside" id="bkA-gG-qWp"/>
                                     <segue destination="rHL-C5-8Wb" kind="presentation" modalPresentationStyle="fullScreen" id="tx9-Xx-4Ou"/>
                                 </connections>
                             </button>
@@ -408,6 +422,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="XMm-HV-RWw"/>
+                    <connections>
+                        <outlet property="menu1Btn" destination="YxN-Ez-JQS" id="VFV-1h-SZK"/>
+                        <outlet property="menu2Btn" destination="CZF-DQ-qfk" id="8tB-RC-0gq"/>
+                        <outlet property="menu3Btn" destination="YUe-lv-ush" id="hy8-zK-Oel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBW-be-k6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,7 +464,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMx-ls-C9F">
-                                <rect key="frame" x="99" y="782" width="59" height="50"/>
+                                <rect key="frame" x="97" y="769" width="59" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system">
@@ -453,7 +472,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-I1-Cfw">
-                                <rect key="frame" x="243" y="782" width="59" height="50"/>
+                                <rect key="frame" x="243" y="769" width="59" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="book" catalog="system">
@@ -463,6 +482,13 @@
                                     <segue destination="Q5I-m4-pQa" kind="presentation" modalPresentationStyle="fullScreen" id="XFU-SI-aRd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nice sentence to spice up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqn-Y4-VEw">
+                                <rect key="frame" x="85" y="654" width="223" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="exZ-ya-yxI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -804,7 +830,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ih9-Dg-HKR"/>
+        <segue reference="XFU-SI-aRd"/>
         <segue reference="UKN-Mw-d6T"/>
     </inferredMetricsTieBreakers>
     <resources>
