@@ -16,6 +16,10 @@ class generateViewController: UIViewController {
     
     var peopleHere :[String] = []
     
+    var count1: Int = 0
+    var count2: Int = 0
+    var count3: Int = 0
+    
     let realm = try! Realm()
     
     var peopleObj: Results<People>!
@@ -41,41 +45,66 @@ class generateViewController: UIViewController {
     }
     
     @IBAction func personOneClick(){
-        // color change
         
-        person1Btn.backgroundColor = UIColor.orange
+        count1 += 1
         
-        // add to array;
+        if (count1 % 2 == 0){
+            person1Btn.backgroundColor = UIColor.gray
+            
+        }else{
+            person1Btn.backgroundColor = UIColor.orange
+        }
         
-        peopleHere.append("1")
-        print(peopleHere)
+ 
+       
         
     }
     
     @IBAction func personTwoClick(){
-        // color change
+        count2 += 1
         
-        person2Btn.backgroundColor = UIColor.orange
-        
-        // add to array
-        
-        peopleHere.append("2")
-        print(peopleHere)
+        if (count2 % 2 == 0){
+            person2Btn.backgroundColor = UIColor.gray
+            
+        }else{
+            person2Btn.backgroundColor = UIColor.orange
+        }
+    
+      
         
     }
     
     @IBAction func personThreeClick(){
-        // color change
+        count3 += 1
         
-        person3Btn.backgroundColor = UIColor.orange
+        if (count3 % 2 == 0){
+            person3Btn.backgroundColor = UIColor.gray
+       
+            
+        }else{
+            person3Btn.backgroundColor = UIColor.orange
+            
+        }
         
-        // add to array
-        peopleHere.append("3")
-        print(peopleHere)
+        
+       
         
     }
     
     @IBAction func generateMenu(){
+        
+        if(count1 % 2 != 0){
+            peopleHere.append("1")
+        }
+        if(count2 % 2 != 0){
+            peopleHere.append("2")
+        }
+        if(count3 % 2 != 0){
+            peopleHere.append("3")
+        }
+        
+        print(peopleHere)
+        
     //algorithm to decide top 3
         
         // get menus from DB, create menuArray
