@@ -77,45 +77,8 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     
         presentPickerController(sourceType: .photoLibrary)
         
-        
-        //let picture: String = nameInput.text!
-        let picture : Menu? = read()
-        /*
-                
-                if picture != nil {
-                    try! realm.write{
-                        picture!.picture = picture
-                        
-                        print("success! 1 ")
-                    }
-                }else{
-                    let newMemo = Menu()
-                    newMemo.picture = picture
-                    
-                    try! realm.write{
-                        realm.add(newMemo)
-                        print("success 2")
-                    }
-                  
-                }
-                
-                let info = realm.objects(Menu.self)
-               // let name = info.personName
-                
-                print(info)
-                //print(name)
-                
-                let alert = UIAlertController(title: "保存完了", message: "新しい人の登録が完了しました", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                present(alert, animated: true, completion: nil)
-            }
-            
-        */
     }
         
-        
-    
-    // add all inputs to database
     
     @IBAction func saveMenu(){
         
@@ -141,6 +104,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
                     newMenu.rate1 = Int(ratingOne) ?? 0
                     newMenu.rate2 = Int(ratingTwo) ?? 0
                     newMenu.rate3 = Int(ratingThree) ?? 0
+                    
                     realm.add(newMenu)
                     
                 }
@@ -150,6 +114,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
                 newMenu.rate1 = Int(ratingOne) ?? 0
                 newMenu.rate2 = Int(ratingTwo) ?? 0
                 newMenu.rate3 = Int(ratingThree) ?? 0
+                
                 
                 try! realm.write{
                     realm.add(newMenu)

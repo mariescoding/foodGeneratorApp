@@ -37,7 +37,7 @@ class generateViewController: UIViewController {
         person1Btn.backgroundColor = UIColor.gray
         person2Btn.backgroundColor = UIColor.gray
         person3Btn.backgroundColor = UIColor.gray
-        
+      
     }
     
     @IBAction func personOneClick(){
@@ -55,7 +55,7 @@ class generateViewController: UIViewController {
     @IBAction func personTwoClick(){
         // color change
         
-        person1Btn.backgroundColor = UIColor.orange
+        person2Btn.backgroundColor = UIColor.orange
         
         // add to array
         
@@ -67,7 +67,7 @@ class generateViewController: UIViewController {
     @IBAction func personThreeClick(){
         // color change
         
-        person1Btn.backgroundColor = UIColor.orange
+        person3Btn.backgroundColor = UIColor.orange
         
         // add to array
         peopleHere.append("3")

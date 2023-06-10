@@ -46,21 +46,25 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let detailsVC = segue.destination as! menuDetailViewController
+        if let detailsVC = segue.destination as? menuDetailViewController{
+            
+            let index = sender as! IndexPath
+            let selectNum = index[1]
+            
+            let selectedMenu = menuObj[selectNum]
+            
+            detailsVC.nameTemp = selectedMenu.name
+            
+            let sum = (selectedMenu.rate1) + (selectedMenu.rate2) + (selectedMenu.rate3)
+            let avg = sum / 3
+            
+            detailsVC.rateTemp = String(avg)
+            
+            //detailsVC.imageTemp =
+        }
+       // let detailsVC = segue.destination as! menuDetailViewController
        
-        let index = sender as! IndexPath
-        let selectNum = index[1]
         
-        let selectedMenu = menuObj[selectNum]
-        
-        detailsVC.nameTemp = selectedMenu.name
-        
-        let sum = (selectedMenu.rate1) + (selectedMenu.rate2) + (selectedMenu.rate3)
-        let avg = sum / 3
-        
-        detailsVC.rateTemp = String(avg)
-        
-        //detailsVC.imageTemp =
         
     }
     
