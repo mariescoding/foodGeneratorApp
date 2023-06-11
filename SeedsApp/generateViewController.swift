@@ -34,7 +34,7 @@ class generateViewController: UIViewController {
         peopleObj = realm.objects(People.self)
         menuObj = realm.objects(Menu.self)
         
-        let menuArray = Array(menuObj)
+       // let menuArray = Array(menuObj)
         
         
         // set button texts to peopleNames
@@ -153,6 +153,10 @@ class generateViewController: UIViewController {
             topThreeVC.twoTemp = menuObj[randomTwo].name
             
             topThreeVC.threeTemp = menuObj[randomThree].name
+            
+            topThreeVC.menu1P = randomOne
+            topThreeVC.menu2P = randomTwo
+            topThreeVC.menu3P = randomThree
             
       
         }

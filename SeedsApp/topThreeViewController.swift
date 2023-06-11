@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class topThreeViewController: UIViewController {
+
+    let realm = try! Realm()
     
     @IBOutlet var menu1Btn : UIButton!
     @IBOutlet var menu2Btn : UIButton!
@@ -21,6 +24,16 @@ class topThreeViewController: UIViewController {
     var oneTemp: String!
     var twoTemp: String!
     var threeTemp: String!
+    
+    var menu1P : Int!
+    var menu2P : Int!
+    var menu3P : Int!
+    
+    var selectMenu : Int!
+    
+    var menusClicked :[String] = []
+    var menuObj: Results<Menu>!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +56,7 @@ class topThreeViewController: UIViewController {
         decideBtn.layer.borderColor = UIColor.black.cgColor
         decideBtn.layer.borderWidth = 5
         
+        menuObj = realm.objects(Menu.self)
         
         // Do any additional setup after loading the view.
     }
@@ -89,26 +103,47 @@ class topThreeViewController: UIViewController {
     
     @IBAction func chooseFinal(){
         
-        // check if < 1 button clicked ; if more, give alert/ if one, continue
+        menusClicked.removeAll()
         
-        
-        if () {
+        if(count1 % 2 != 0){
+            menusClicked.append("1")
+            selectMenu = menu1P
             
-            let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+        }
+        if(count2 % 2 != 0){
+            menusClicked.append("2")
+            selectMenu = menu2P
+            
+        }
+        if(count3 % 2 != 0){
+            menusClicked.append("3")
+            selectMenu = menu3P
+            
+        }
+        
+        print(menusClicked)
+        
+        // if none is picked
+        if (menusClicked.count == 0) {
+            
+            let alert = UIAlertController(title: "どれかを選択してください！", message: "入力してください", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             
-        }else if(){
+        }
+        // if more than 1 is picked
+        else if(menusClicked.count > 1){
             
-            let alert = UIAlertController(title: "入力してください", message: "入力してください", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "NO", style: .default, handler: nil))
+            let alert = UIAlertController(title: "一つだけを選んでください！", message: "入力してください", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             
             
         }else{
             
+            print("can go to home page !!")
             
-            
+           
             
         }
         
@@ -121,13 +156,11 @@ class topThreeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let homeVC = segue.destination as? home2ViewController{
-
-            let selectNum = index[1]
             
-           // let selectedMenu = menuObj[selectNum]
+        let selectedMenu = menuObj[selectMenu]
             
-            homeVC.nameTemp =
-            homeVC.imgTemp =
+            homeVC.nameTemp =  selectedMenu.name
+            //homeVC.imgTemp = selectedMenu.picture
             
            
         }
