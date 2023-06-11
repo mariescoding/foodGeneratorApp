@@ -8,9 +8,20 @@
 import UIKit
 
 class home2ViewController: UIViewController {
+    
+    @IBOutlet var menuName : UILabel!
+    @IBOutlet var menuImg: UIImageView!
+    
+    var nameTemp: String!
+    var imgTemp: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuName.text = nameTemp
+        menuImg.image = imgTemp
+        
+        
 
         // Do any additional setup after loading the view.
     }

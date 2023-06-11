@@ -14,6 +14,11 @@ class browseCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        menuName.layer.borderWidth = 4
+        menuName.layer.borderColor = UIColor.black.cgColor
+        menuName.layer.cornerRadius = 25
+        
+        
         
         // Initialization code
     }

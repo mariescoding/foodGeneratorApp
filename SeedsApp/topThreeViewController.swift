@@ -12,6 +12,7 @@ class topThreeViewController: UIViewController {
     @IBOutlet var menu1Btn : UIButton!
     @IBOutlet var menu2Btn : UIButton!
     @IBOutlet var menu3Btn : UIButton!
+    @IBOutlet var decideBtn : UIButton!
     
     var count1: Int = 0
     var count2: Int = 0
@@ -30,36 +31,44 @@ class topThreeViewController: UIViewController {
         menu2Btn.setTitle(twoTemp, for: .normal)
         menu3Btn.setTitle(threeTemp, for: .normal)
      
-        menu1Btn.backgroundColor = UIColor.gray
-        menu2Btn.backgroundColor = UIColor.gray
-        menu3Btn.backgroundColor = UIColor.gray
+        menu1Btn.backgroundColor = UIColor.systemGray3
+        menu2Btn.backgroundColor = UIColor.systemGray3
+        menu3Btn.backgroundColor = UIColor.systemGray3
+        
+        menu1Btn.layer.cornerRadius = 18
+        menu2Btn.layer.cornerRadius = 18
+        menu3Btn.layer.cornerRadius = 18
+        decideBtn.layer.cornerRadius = 30
+        
+        decideBtn.layer.borderColor = UIColor.black.cgColor
+        decideBtn.layer.borderWidth = 5
+        
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func menuOneClick(){
         
-        print("1 clciked")
         count1 += 1
         
         if (count1 % 2 == 0){
-            menu1Btn.backgroundColor = UIColor.gray
+            menu1Btn.backgroundColor = UIColor.systemGray3
             
         }else{
-            menu1Btn.backgroundColor = UIColor.orange
+            menu1Btn.backgroundColor = UIColor.systemOrange
         }
         
     }
     
     @IBAction func menuTwoClick(){
-        print("2 clciked")
+        
         count2 += 1
         
         if (count2 % 2 == 0){
-            menu2Btn.backgroundColor = UIColor.gray
+            menu2Btn.backgroundColor = UIColor.systemGray3
             
         }else{
-            menu2Btn.backgroundColor = UIColor.orange
+            menu2Btn.backgroundColor = UIColor.systemOrange
         }
     
     }
@@ -68,11 +77,11 @@ class topThreeViewController: UIViewController {
         count3 += 1
         
         if (count3 % 2 == 0){
-            menu3Btn.backgroundColor = UIColor.gray
+            menu3Btn.backgroundColor = UIColor.systemGray3
        
             
         }else{
-            menu3Btn.backgroundColor = UIColor.orange
+            menu3Btn.backgroundColor = UIColor.systemOrange
             
         }
    
@@ -102,12 +111,6 @@ class topThreeViewController: UIViewController {
             
             
         }
-            
-            
-        }
-        
-    
-    
         
             // search database for menu, set home's text & image to that menu details
         
@@ -115,15 +118,21 @@ class topThreeViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if let homeVC = segue.destination as? home2ViewController{
 
+            let selectNum = index[1]
+            
+           // let selectedMenu = menuObj[selectNum]
+            
+            homeVC.nameTemp =
+            homeVC.imgTemp =
+            
+           
+        }
+      
+    }
+    
+    
 }

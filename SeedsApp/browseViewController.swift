@@ -84,7 +84,7 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
         let horizontalSpace:CGFloat = 4
 
         //セルのサイズを指定。画面上にセルを3つ表示させたいのであれば、デバイスの横幅を3分割した横幅　- セル間のスペース*2（セル間のスペースが二つあるため）
-       let cellSize:CGFloat = self.view.bounds.width/3 - horizontalSpace*2
+       let cellSize:CGFloat = self.view.bounds.width/2
      
         
         // 正方形で返すためにwidth,heightを同じにする

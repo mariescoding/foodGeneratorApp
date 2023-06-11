@@ -43,10 +43,14 @@ class generateViewController: UIViewController {
         person2Btn.setTitle(peopleObj[1].people, for: .normal)
         person3Btn.setTitle(peopleObj[2].people, for: .normal)
      
-        person1Btn.backgroundColor = UIColor.gray
-        person2Btn.backgroundColor = UIColor.gray
-        person3Btn.backgroundColor = UIColor.gray
+        person1Btn.backgroundColor = UIColor.systemGray3
+        person2Btn.backgroundColor = UIColor.systemGray3
+        person3Btn.backgroundColor = UIColor.systemGray3
       
+        person1Btn.layer.cornerRadius = 18
+        person2Btn.layer.cornerRadius = 18
+        person3Btn.layer.cornerRadius = 18
+        
     }
     
     @IBAction func personOneClick(){
@@ -54,10 +58,10 @@ class generateViewController: UIViewController {
         count1 += 1
         
         if (count1 % 2 == 0){
-            person1Btn.backgroundColor = UIColor.gray
+            person1Btn.backgroundColor = UIColor.systemGray3
             
         }else{
-            person1Btn.backgroundColor = UIColor.orange
+            person1Btn.backgroundColor = UIColor.systemTeal
         }
         
     }
@@ -66,10 +70,13 @@ class generateViewController: UIViewController {
         count2 += 1
         
         if (count2 % 2 == 0){
-            person2Btn.backgroundColor = UIColor.gray
+            person2Btn.backgroundColor = UIColor.systemGray3
+            
+            //person2Btn.titleLabel?.textColor = UIColor.black
             
         }else{
-            person2Btn.backgroundColor = UIColor.orange
+            person2Btn.backgroundColor = UIColor.systemTeal
+           
         }
     
     }
@@ -78,11 +85,11 @@ class generateViewController: UIViewController {
         count3 += 1
         
         if (count3 % 2 == 0){
-            person3Btn.backgroundColor = UIColor.gray
+            person3Btn.backgroundColor = UIColor.systemGray3
        
             
         }else{
-            person3Btn.backgroundColor = UIColor.orange
+            person3Btn.backgroundColor = UIColor.systemTeal
             
         }
    
@@ -105,7 +112,7 @@ class generateViewController: UIViewController {
         
         print(peopleHere)
         
-    //algorithm to decide top 3
+        //algorithm to decide top 3
         
         // get menus from DB, create menuArray
         
