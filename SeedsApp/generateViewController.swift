@@ -24,6 +24,7 @@ class generateViewController: UIViewController {
     
     var peopleObj: Results<People>!
     var menuObj: Results<Menu>!
+    var menuArray : [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,10 @@ class generateViewController: UIViewController {
         // get peopleNames from DB
         
         peopleObj = realm.objects(People.self)
+        menuObj = realm.objects(Menu.self)
+        
+        let menuArray = Array(menuObj)
+        
         
         // set button texts to peopleNames
         
@@ -83,6 +88,9 @@ class generateViewController: UIViewController {
    
     }
     
+   
+
+    
     @IBAction func generateMenu(){
         
         if(count1 % 2 != 0){
@@ -105,36 +113,44 @@ class generateViewController: UIViewController {
         var avgRate : [String] = []
         
         
-        // calcualte avg rate of all menus & push to avgRateArray
-        
-            // access DB by name
-        
-     
-        
-        
-            // if in peopleHere, add to sum
-        
-        
-        
-            // calculate average
-        
-        
-        
-        // sort the avg & menu arrays ; selection sort
-        
-        
-        
+ 
         //get the first three items of menuArray
+    
+       shuffle()
         
-        
-        
-
         
         
     }
     
+    func shuffle() -> Array<Any> {
+        for _ in menuArray {
+            let swap1 = Int.random(in: 0..<menuArray.count)
+            let swap2 = Int.random(in: 0..<menuArray.count)
+            
+            menuArray.swapAt(swap1, swap2)
+            
+        }
+        return menuArray
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let topThreeVC = segue.destination as? topThreeViewController{
+            
+            let randomOne = Int.random(in: 0..<menuObj.count)
+            let randomTwo = Int.random(in: 0..<menuObj.count)
+            let randomThree = Int.random(in: 0..<menuObj.count)
+            
+            topThreeVC.oneTemp = menuObj[randomOne].name
+            
+            topThreeVC.twoTemp = menuObj[randomTwo].name
+            
+            topThreeVC.threeTemp = menuObj[randomThree].name
+            
+      
+        }
+      
+    }
 
     /*
     // MARK: - Navigation

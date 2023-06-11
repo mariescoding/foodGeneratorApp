@@ -42,8 +42,6 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
         performSegue(withIdentifier: "menuDetail", sender: indexPath)
         
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let detailsVC = segue.destination as? menuDetailViewController{
@@ -62,12 +60,8 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
             
             //detailsVC.imageTemp =
         }
-       // let detailsVC = segue.destination as! menuDetailViewController
-       
-        
-        
+      
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuObj.count
@@ -80,8 +74,6 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
         let object = menuObj[indexPath.row]
         
         cell.menuName.text = object.name
-        
-    
         
         return cell
     }

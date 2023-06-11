@@ -324,7 +324,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="generateMenu" destination="v90-CQ-qbB" eventType="touchUpInside" id="3Lc-AX-NWT"/>
-                                    <segue destination="gUu-69-b8H" kind="presentation" id="sja-fj-Tdy"/>
+                                    <segue destination="gUu-69-b8H" kind="presentation" identifier="topThree" id="sja-fj-Tdy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -363,7 +363,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxN-Ez-JQS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxN-Ez-JQS">
                                 <rect key="frame" x="121" y="225" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -376,7 +376,7 @@
                                     <action selector="menuOneClick" destination="gUu-69-b8H" eventType="touchUpInside" id="Cbd-HY-rIX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZF-DQ-qfk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZF-DQ-qfk">
                                 <rect key="frame" x="120" y="335" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -389,7 +389,7 @@
                                     <action selector="menuTwoClick" destination="gUu-69-b8H" eventType="touchUpInside" id="i8d-EO-RYD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUe-lv-ush">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUe-lv-ush">
                                 <rect key="frame" x="120" y="441" width="152" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
