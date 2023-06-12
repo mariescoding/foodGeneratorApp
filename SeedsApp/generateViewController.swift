@@ -34,7 +34,21 @@ class generateViewController: UIViewController {
         peopleObj = realm.objects(People.self)
         menuObj = realm.objects(Menu.self)
         
-       // let menuArray = Array(menuObj)
+        
+        
+        let menuArray = Array(menuObj)
+        
+        print(menuObj)
+        
+        print(menuArray)
+        print("object element" , menuObj[2])
+        print("array element", menuArray[2])
+        
+        for menuobj in menuObj{
+            print(menuobj)
+            
+        }
+        
         
         
         // set button texts to peopleNames
@@ -113,22 +127,22 @@ class generateViewController: UIViewController {
         print(peopleHere)
         
         //algorithm to decide top 3
-        
-        // get menus from DB, create menuArray
-        
+  
         var menuName : [String] = []
         var avgRate : [String] = []
+        
         
         
  
         //get the first three items of menuArray
     
-       shuffle()
+   
         
         
         
     }
     
+    /*
     func shuffle() -> Array<Any> {
         for _ in menuArray {
             let swap1 = Int.random(in: 0..<menuArray.count)
@@ -139,6 +153,8 @@ class generateViewController: UIViewController {
         }
         return menuArray
     }
+    */
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

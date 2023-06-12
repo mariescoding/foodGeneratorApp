@@ -532,7 +532,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="メニューを追加しよう！" id="rFi-GK-eEQ">
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="checkmark" catalog="system" id="YoK-Fg-WW8">
+                            <barButtonItem title="✔︎" id="YoK-Fg-WW8">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="BFy-9I-sYL" kind="presentation" modalPresentationStyle="fullScreen" id="5vc-BC-Zv7"/>
@@ -845,7 +845,6 @@
     <resources>
         <image name="Miroodles - Sticker" width="400" height="400"/>
         <image name="book" catalog="system" width="128" height="99"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pngtree-one-line-drawing-vector-of-a-person-holding-phone-and-drinking-png-image_316348" width="360" height="360"/>
