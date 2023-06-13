@@ -22,6 +22,7 @@
 		982CB5EC2A29EE040044AD69 /* addRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */; };
 		982CB5EE2A2A088A0044AD69 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5ED2A2A088A0044AD69 /* Menu.swift */; };
 		982CB5F02A2B90180044AD69 /* home2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CB5EF2A2B90170044AD69 /* home2ViewController.swift */; };
+		983457542A3858DF000DEEBE /* loadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983457532A3858DF000DEEBE /* loadViewController.swift */; };
 		98551C982A25E86800C79B45 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C972A25E86800C79B45 /* Realm */; };
 		98551C9A2A25E86800C79B45 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 98551C992A25E86800C79B45 /* RealmSwift */; };
 		985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985D00BE2A25E15200083FEB /* generateViewController.swift */; };
@@ -52,6 +53,7 @@
 		982CB5EB2A29EE040044AD69 /* addRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addRatingViewController.swift; sourceTree = "<group>"; };
 		982CB5ED2A2A088A0044AD69 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		982CB5EF2A2B90170044AD69 /* home2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = home2ViewController.swift; sourceTree = "<group>"; };
+		983457532A3858DF000DEEBE /* loadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadViewController.swift; sourceTree = "<group>"; };
 		985D00BE2A25E15200083FEB /* generateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateViewController.swift; sourceTree = "<group>"; };
 		985D00C02A25E16800083FEB /* browseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browseViewController.swift; sourceTree = "<group>"; };
 		985D00C22A25E4B300083FEB /* introViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				98D2C6A92A210A4B003BFEFC /* AppDelegate.swift */,
 				98D2C6AB2A210A4B003BFEFC /* SceneDelegate.swift */,
 				98D2C6AD2A210A4B003BFEFC /* ViewController.swift */,
+				983457532A3858DF000DEEBE /* loadViewController.swift */,
 				985D00C22A25E4B300083FEB /* introViewController.swift */,
 				982CB5D72A28CB2B0044AD69 /* PeopleTableViewController.swift */,
 				982CB5DB2A28CBBE0044AD69 /* PeopleTableViewCell.swift */,
@@ -227,6 +230,7 @@
 				985D00C12A25E16800083FEB /* browseViewController.swift in Sources */,
 				985D40B02A2DBC070028439E /* Memo.swift in Sources */,
 				985D00BF2A25E15200083FEB /* generateViewController.swift in Sources */,
+				983457542A3858DF000DEEBE /* loadViewController.swift in Sources */,
 				985D00C32A25E4B300083FEB /* introViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

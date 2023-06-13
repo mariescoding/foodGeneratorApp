@@ -23,6 +23,13 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     
     let realm = try! Realm()
     var objects: Results<People>!
+    
+    // ドキュメントディレクトリの「ファイルURL」（URL型）定義
+       var documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+       // ドキュメントディレクトリの「パス」（String型）定義
+       let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+      
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +60,31 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
     }
     
     // function for when click on picture button
+    
+    func createLocalDataFile() {
+            // 作成するテキストファイルの名前
+            let fileName = "\(NSUUID().uuidString).png"
+
+            // DocumentディレクトリのfileURLを取得
+            if documentDirectoryFileURL != nil {
+                // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+                let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+                documentDirectoryFileURL = path
+            }
+        }
+        
+        //画像を保存する関数の部分
+        func saveImage() {
+            createLocalDataFile()
+            //pngで保存する場合
+            let pngImageData = photoImageView.image?.pngData()
+            do {
+                try pngImageData!.write(to: documentDirectoryFileURL)
+            } catch {
+                //エラー処理
+                print("エラー")
+            }
+        }
     
 
     func presentPickerController(sourceType: UIImagePickerController.SourceType){
@@ -104,7 +136,7 @@ class addRatingViewController: UIViewController, UITextFieldDelegate,UINavigatio
                     newMenu.rate1 = Int(ratingOne) ?? 0
                     newMenu.rate2 = Int(ratingTwo) ?? 0
                     newMenu.rate3 = Int(ratingThree) ?? 0
-                    
+                    newMenu.picture = documentDirectoryFileURL.absoluteString
                     realm.add(newMenu)
                     
                 }

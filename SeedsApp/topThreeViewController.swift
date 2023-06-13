@@ -160,7 +160,16 @@ class topThreeViewController: UIViewController {
         let selectedMenu = menuObj[selectMenu]
             
             homeVC.nameTemp =  selectedMenu.name
-            //homeVC.imgTemp = selectedMenu.picture
+            
+            //URL型にキャスト
+            let fileURL = URL(string: selectedMenu.picture)
+            
+            //パス型に変換
+            let filePath = fileURL?.path
+           
+            
+            homeVC.imgTemp = UIImage(contentsOfFile: filePath!)
+          
             
            
         }

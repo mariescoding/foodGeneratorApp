@@ -58,7 +58,19 @@ class browseViewController: UIViewController, UICollectionViewDataSource , UICol
             
             detailsVC.rateTemp = String(avg)
             
-            //detailsVC.imageTemp =
+            //URL型にキャスト
+            let fileURL = URL(string: selectedMenu.picture)
+            
+            //パス型に変換
+            let filePath = fileURL?.path
+           
+           // showImageView.image = UIImage(contentsOfFile: filePath!)
+            
+            detailsVC.imageTemp = UIImage(contentsOfFile: filePath!)
+            
+            print(filePath)
+            
+            
         }
       
     }

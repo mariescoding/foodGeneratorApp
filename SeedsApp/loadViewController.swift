@@ -1,38 +1,32 @@
 //
-//  menuDetailViewController.swift
+//  loadViewController.swift
 //  SeedsApp
 //
-//  Created by Marie Muramatsu on 10/6/23.
+//  Created by Marie Muramatsu on 13/6/23.
 //
 
 import UIKit
 import RealmSwift
 
-class menuDetailViewController: UIViewController {
-    
-    @IBOutlet var menuName: UILabel!
-    @IBOutlet var menuImage: UIImageView!
-    @IBOutlet var avgRating: UILabel!
+class loadViewController: UIViewController {
     
     let realm = try! Realm()
     
-    var menus: Results<Menu>!
-    
-    var nameTemp: String!
-    var imageTemp: UIImage!
-    var rateTemp: String!
+    var peopleObj: Results<People>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menus = realm.objects(Menu.self)
+        peopleObj = realm.objects(People.self)
         
-        menuName.text = nameTemp
-        menuImage.image = imageTemp
-        avgRating.text = rateTemp
-        
-        print(menuImage)
-        print(imageTemp)
+        if(peopleObj.isEmpty){
+            
+            
+            
+        }else{
+            
+            
+        }
 
         // Do any additional setup after loading the view.
     }

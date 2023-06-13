@@ -114,6 +114,25 @@
             </objects>
             <point key="canvasLocation" x="2504.5801526717555" y="-8.4507042253521139"/>
         </scene>
+        <!--Load View Controller-->
+        <scene sceneID="v1R-ad-bdp">
+            <objects>
+                <viewController id="J7n-nd-nqS" customClass="loadViewController" customModule="SeedsApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44X-vK-brg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dgi-Zx-iJj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="yX0-iZ-iLr"/>
+                        <segue destination="BFy-9I-sYL" kind="show" id="4u5-QR-xna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qih-PT-fDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="8"/>
+        </scene>
         <!--Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -840,7 +859,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XFU-SI-aRd"/>
-        <segue reference="SRH-v3-sHl"/>
+        <segue reference="UKN-Mw-d6T"/>
+        <segue reference="yX0-iZ-iLr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Miroodles - Sticker" width="400" height="400"/>

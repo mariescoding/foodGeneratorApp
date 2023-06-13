@@ -44,13 +44,6 @@ class generateViewController: UIViewController {
         print("object element" , menuObj[2])
         print("array element", menuArray[2])
         
-        for menuobj in menuObj{
-            print(menuobj)
-            
-        }
-        
-        
-        
         // set button texts to peopleNames
         
         person1Btn.setTitle(peopleObj[0].people, for: .normal)
@@ -131,12 +124,16 @@ class generateViewController: UIViewController {
         var menuName : [String] = []
         var avgRate : [String] = []
         
-        
-        
+
  
         //get the first three items of menuArray
     
-   
+        for menuobj in menuObj{
+            
+            print(menuobj)
+            
+        }
+        
         
         
         
